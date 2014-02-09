@@ -28,6 +28,7 @@
     "pretty-date": "~0.2.0",
     "brfs": "0.0.9",
     "handlebars": "~1.3.0",
-    "dom": "0.0.3"
+    "dom": "0.0.3",
+    "watchify": "~0.6.0"
   }
 }
