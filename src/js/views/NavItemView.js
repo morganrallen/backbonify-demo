@@ -1,4 +1,5 @@
 var dom = require("dom");
+var fs = require("fs");
 var Container = require("./Container");
 var _ = require("underscore");
 
@@ -45,30 +46,6 @@ module.exports = Container.extend({
     video.play();
   },
 
-  tpl: '\
-  <div class="row">\
-    <div class="col-sm-8 col-xs-8">\
-      <div class="title">{{ title }}</div>\
-    </div>\
-  </div>\
-\
-  <div class="row">\
-    <div class="col-sm-3">\
-      <div class="thumb">\
-        <div class="holder">\
-          <img src="{{ thumbnail }}" />\
-          <img class="play-button" src="/img/play_button.png" />\
-        </div>\
-      </div>\
-    </div>\
-    <div class="col-sm-8">\
-      <div class="video-wrap">\
-        <video controls src="{{ video }} "></video>\
-      </div>\
-    </div>\
-    <div class="col-sm-4 date">\
-      {{pretty publishedDate}}\
-    </div>\
-  </div>'
+  tpl: fs.readFileSync(__dirname + "/templates/NavItemView.html")
 });
 
