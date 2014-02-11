@@ -1,4 +1,3 @@
-var dom = require("dom");
 var fs = require("fs");
 var Container = require("./Container");
 var Handlebars = require("handlebars");
@@ -16,7 +15,8 @@ module.exports = Container.extend({
     this.$play = this.$el.find(".play-button");
     this.$play.on("click", _.bind(this.onPlayClick, this));
 
-    this.$video = this.$el.find("video");
+    this.$video = $("<video></video>");
+    this.$video.attr("controls", true);
     this.video = this.$video[0];
 
     modal.on("hidden.bs.modal", _.bind(this.onModalClose, this));
@@ -39,6 +39,8 @@ module.exports = Container.extend({
     var m = this.getMedia();
 
     return {
+      contentSnippet: a.contentSnippet,
+      content: a.content,
       title: a.title,
       publishedDate: a.publishedDate,
       thumbnail: m.thumbnails[0].url,

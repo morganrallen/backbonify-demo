@@ -1,4 +1,6 @@
 @import "../../node_modules/bootstrap/less/bootstrap";
+@import "variables";
+
 @import "modal";
 
 .nav-item {
@@ -12,7 +14,13 @@
 
   padding: 15px;
 
+  .content {
+    padding: 15px;
+  }
+
   .date {
+    color: @colorDate;
+    font-size: .7em;
     margin-left: 20px;
   }
 
@@ -25,10 +33,15 @@
     }
   }
 
-  .play-button {
-    left: 15px;
-    position: absolute;
-    top: 10px;
+  .date, .thumb {
+    text-align: center;
+  }
+
+  .hover {
+    height: 1px;
+    .play-button {
+      margin-top: -160px;
+    }
   }
 
   video {
