@@ -6,7 +6,7 @@
   "main": "index.js",
   "readme": "README.md",
   "scripts": {
-    "browserify": "browserify -t brfs -r ./src/js/app.js:demo -v -o ./app/js/app.js",
+    "browserify": "browserify -t brfs -r ./src/js/app.js:demo -o ./app/js/app.js",
     "build": "npm run browserify && npm run less",
     "less": "lessc ./src/less/index.less ./app/css/index.css",
     "less-dev": "nodemon -x lessc ./src/less/index.less --source-map-map-inline ./app/css/index.css",
