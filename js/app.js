@@ -18885,7 +18885,7 @@ module.exports = Container.extend({
     video.play();
   },
 
-  tpl: "<div class=\"row\">\n  <div class=\"col-xs-12\">\n    <div class=\"title\">{{ title }}</div>\n  </div>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-sm-3\">\n    <div class=\"thumb\">\n      <div class=\"holder\">\n        <img src=\"{{ thumbnail }}\" />\n        <div class=\"hover\">\n          <img class=\"play-button\" src=\"/img/play_button.png\" />\n        </div>\n      </div>\n    </div>\n    <div class=\"date\">\n      {{pretty publishedDate}}\n    </div>\n  </div>\n  <div class=\"col-xs-12 col-sm-9\">\n    <div class=\"content\">{{{ content }}}</div>\n  </div>\n</div>\n",
+  tpl: "<div class=\"row\">\n  <div class=\"col-xs-12\">\n    <div class=\"title\">{{ title }}</div>\n  </div>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-sm-3\">\n    <div class=\"thumb\">\n      <div class=\"holder\">\n        <img src=\"{{ thumbnail }}\" />\n        <div class=\"hover\">\n          <img class=\"play-button\" src=\"img/play_button.png\" />\n        </div>\n      </div>\n    </div>\n    <div class=\"date\">\n      {{pretty publishedDate}}\n    </div>\n  </div>\n  <div class=\"col-xs-12 col-sm-9\">\n    <div class=\"content\">{{{ content }}}</div>\n  </div>\n</div>\n",
   tplTitle: "<span>{{ title }}</span>\n<span class=\"date\">{{pretty date}}</span>\n"
 });
 
